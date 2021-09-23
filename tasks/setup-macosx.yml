@@ -6,13 +6,9 @@
   package:
     name: wireguard-go
     state: present
-  become: yes
-  tags:
-    - wg-install
+  become: true
 
 - name: (MacOS) Install wireguard-tools package
   package:
     name: wireguard-tools
     state: present
-  tags:
-    - wg-install

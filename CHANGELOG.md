@@ -1,10 +1,32 @@
 <!--
-Copyright (C) 2018-2020 Robert Wimmer
+Copyright (C) 2018-2021 Robert Wimmer
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 Changelog
 ---------
+
+**8.0.0**
+
+- add `Debian 11 (Bullseye)` support
+- add 'Fedora 34` support
+- remove `Fedora 32` support (EOL was in May 2021)
+- fix various issues reported by `ansible-lint`
+- Archlinux: As `linux-lts` is using kernel `5.10` now there is no need to install `wireguard-lts` + WireGuard DKMS packages any longer (and this packages are gone anyway)
+
+**7.12.0**
+
+- Refactor `wg-install` tag handling. For more details see [Fix tag "wg-install" & Add no_log](https://github.com/githubixx/ansible-role-wireguard/pull/110) and [Tag wg-install is not applied properly](Tag wg-install is not applied properly) (contribution by @moonrail)
+- Default verbosity of 0 or slight increases up to 2 will now not print any private keys to output (contribution by @moonrail)
+
+**7.11.0**
+
+- Introduce new variables `wireguard_service_enabled` and `wireguard_service_state` (contribution by @tjend)
+
+**7.10.0**
+
+- Support for Proxmox
+- Check if `wireguard_endpoint` exists before checking if it is empty
 
 **7.9.0**
 
